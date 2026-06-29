@@ -34,37 +34,11 @@
 <script>
 'use strict';
 
-// Paste new products inside this array. Use fixed:true for locked SP and fixed:false for base-price items.
+// ===== LEVIYA PRODUCT DATABASE START =====
 const rawItems = [
-  {name:'Hercotech Y-Strainer Flange 2"',price:4550,fixed:true,brand:'Hercotech',category:'Valves',sizeInch:'2"',sizeMm:'50 mm',details:'Flange type. Size details: 50 mm.',sourcePriority:2},
-  {name:'Hercotech Y-Strainer Flange 3"',price:7150,fixed:true,brand:'Hercotech',category:'Valves',sizeInch:'3"',sizeMm:'75 mm',details:'Flanged Wye strainer. Size details: 75 mm.',sourcePriority:2},
-  {name:'Hercotech Y-Strainer Flange 4"',price:9850,fixed:true,brand:'Hercotech',category:'Valves',sizeInch:'4"',sizeMm:'100 mm',details:'Flanged Wye strainer. Size details: 100 mm.',sourcePriority:2},
-  {name:'Hercotech Stainless Steel Flexible Coupling 2"',price:1280,fixed:true,brand:'Hercotech',category:'Stainless / SS',sizeInch:'2"',sizeMm:'50 mm',details:'Stainless flexible coupling. Size details: 50 mm.',sourcePriority:2},
-  {name:'Hercotech Stainless Steel Flexible Coupling 4"',price:2460,fixed:true,brand:'Hercotech',category:'Stainless / SS',sizeInch:'4"',sizeMm:'100 mm',details:'Stainless flexible coupling. Size details: 100 mm.',sourcePriority:2},
-  {name:'Hercotech Hub-Less Stainless Coupling 3"',price:1690,fixed:true,brand:'Hercotech',category:'Stainless / SS',sizeInch:'3"',sizeMm:'75 mm',details:'Hub-less stainless coupling. Size details: 75 mm.',sourcePriority:2},
-  {name:'Hercotech DI Mechanical Tee 4" x 2"',price:3750,fixed:false,brand:'Hercotech',category:'CI / DI',sizeInch:'4" x 2"',sizeMm:'100 mm x 50 mm',details:'Ductile iron mechanical tee. Size details: 100 mm x 50 mm.',sourcePriority:2},
-  {name:'Hercotech DI Mechanical Tee 6" x 2"',price:5120,fixed:false,brand:'Hercotech',category:'CI / DI',sizeInch:'6" x 2"',sizeMm:'150 mm x 50 mm',details:'Ductile iron mechanical tee. Size details: 150 mm x 50 mm.',sourcePriority:2},
-  {name:'FS Brass Elbow 1/2"',price:95,fixed:false,brand:'FS',category:'Brass',sizeInch:'1/2"',sizeMm:'15 mm',details:'Brass elbow fitting. Size details: 15 mm.',sourcePriority:1},
-  {name:'FS Brass Tee 3/4"',price:145,fixed:false,brand:'FS',category:'Brass',sizeInch:'3/4"',sizeMm:'20 mm',details:'Brass tee fitting. Size details: 20 mm.',sourcePriority:1},
-  {name:'FS Brass Ball Valve 1"',price:520,fixed:false,brand:'FS',category:'Valves',sizeInch:'1"',sizeMm:'25 mm',details:'Brass ball valve. Size details: 25 mm.',sourcePriority:1},
-  {name:'Jianzhi GI Elbow 1"',price:78,fixed:false,brand:'Jianzhi',category:'BI / GI',sizeInch:'1"',sizeMm:'25 mm',details:'Galvanized iron threaded elbow. Size details: 25 mm.',sourcePriority:1},
-  {name:'Jianzhi BI Tee 2"',price:310,fixed:false,brand:'Jianzhi',category:'BI / GI',sizeInch:'2"',sizeMm:'50 mm',details:'Black iron threaded tee. Size details: 50 mm.',sourcePriority:1},
-  {name:'Jianzhi GI Cross Tee 1-1/2"',price:365,fixed:false,brand:'Jianzhi',category:'BI / GI',sizeInch:'1-1/2"',sizeMm:'40 mm',details:'Galvanized iron cross tee. Size details: 40 mm.',sourcePriority:1},
-  {name:'Nation CI Cross Tee 4"',price:2950,fixed:false,brand:'Nation',category:'CI / DI',sizeInch:'4"',sizeMm:'100 mm',details:'Cast iron cross tee. Size details: 100 mm.',sourcePriority:1},
-  {name:'Nation DI Flanged Tee 6"',price:4820,fixed:false,brand:'Nation',category:'CI / DI',sizeInch:'6"',sizeMm:'150 mm',details:'Ductile iron flanged tee. Size details: 150 mm.',sourcePriority:1},
-  {name:'HDPE Butt Fusion Elbow 90° 4"',price:880,fixed:false,brand:'Generic',category:'HDPE / PE',sizeInch:'4"',sizeMm:'100 mm',details:'HDPE / PE butt fusion elbow. Size details: 100 mm.',sourcePriority:1},
-  {name:'HDPE Butt Fusion Tee 3"',price:690,fixed:false,brand:'Generic',category:'HDPE / PE',sizeInch:'3"',sizeMm:'75 mm',details:'HDPE / PE butt fusion tee. Size details: 75 mm.',sourcePriority:1},
-  {name:'HDPE Cross Tee 4"',price:1320,fixed:false,brand:'Generic',category:'HDPE / PE',sizeInch:'4"',sizeMm:'100 mm',details:'HDPE / PE cross tee. Size details: 100 mm.',sourcePriority:1},
-  {name:'GI Pipe Schedule 40 4" Superior Brand',price:6420,fixed:false,brand:'Superior',category:'Pipes',sizeInch:'4"',sizeMm:'100 mm',details:'Galvanized iron pipe, Schedule 40. Size details: 100 mm.',sourcePriority:1},
-  {name:'GI Pipe Schedule 40 2" Supreme Brand',price:2450,fixed:false,brand:'Supreme',category:'Pipes',sizeInch:'2"',sizeMm:'50 mm',details:'Galvanized iron pipe, Schedule 40. Size details: 50 mm.',sourcePriority:1},
-  {name:'PVC Tee Cross 4"',price:420,fixed:false,brand:'Generic',category:'PVC / uPVC',sizeInch:'4"',sizeMm:'100 mm',details:'uPVC / PVC cross tee. Size details: 100 mm.',sourcePriority:1},
-  {name:'PPR Pipe PN20 1"',price:210,fixed:false,brand:'Generic',category:'PPR',sizeInch:'1"',sizeMm:'25 mm',details:'PPR pipe PN20. Size details: 25 mm.',sourcePriority:1},
-  {name:'Water Meter Brass 1/2"',price:780,fixed:false,brand:'Generic',category:'Meters',sizeInch:'1/2"',sizeMm:'15 mm',details:'Residential brass water meter. Size details: 15 mm.',sourcePriority:1},
-  {name:'Flow Meter Flanged 4"',price:18500,fixed:true,brand:'Generic',category:'Meters',sizeInch:'4"',sizeMm:'100 mm',details:'Industrial flanged flow meter. Size details: 100 mm.',sourcePriority:2},
-  {name:'Fire Protection Sprinkler Head 1/2"',price:340,fixed:false,brand:'Generic',category:'Fire Protection',sizeInch:'1/2"',sizeMm:'15 mm',details:'Standard fire sprinkler head. Size details: 15 mm.',sourcePriority:1},
-  {name:'Fire Hose Cabinet 1-1/2"',price:6250,fixed:false,brand:'Generic',category:'Fire Protection',sizeInch:'1-1/2"',sizeMm:'40 mm',details:'Fire hose cabinet assembly. Size details: 40 mm.',sourcePriority:1},
-  {name:'Pipe Hanger Clamp 4"',price:155,fixed:false,brand:'Generic',category:'Accessories',sizeInch:'4"',sizeMm:'100 mm',details:'Pipe hanger clamp accessory. Size details: 100 mm.',sourcePriority:1}
+  // product entries go here
 ];
+// ===== LEVIYA PRODUCT DATABASE END =====
 
 const categories = ['All','Pipes','Fittings','Valves','Meters','Fire Protection','HDPE / PE','PVC / uPVC','PPR','BI / GI','CI / DI','Brass','Stainless / SS','Accessories'];
 const mmToInch = {'15':'1/2"','20':'3/4"','25':'1"','32':'1-1/4"','40':'1-1/2"','50':'2"','65':'2-1/2"','75':'3"','80':'3"','90':'3-1/2"','100':'4"','110':'4"','125':'5"','150':'6"','160':'6"','200':'8"','225':'9"','250':'10"','280':'11"','300':'12"','315':'12"','355':'14"','400':'16"','450':'18"','500':'20"'};
