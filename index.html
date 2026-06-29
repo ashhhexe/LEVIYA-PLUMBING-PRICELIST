@@ -36,7 +36,77 @@
 
 // ===== LEVIYA PRODUCT DATABASE START =====
 const rawItems = [
-  // product entries go here
+  { name: 'Hercotech Y-Strainer Flange 2"', price: 4550.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '2"', sizeMm: '50 mm', details: 'Flange type. Size details: 50 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 2-1/2"', price: 6500.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '2-1/2"', sizeMm: '65 mm', details: 'Flange type. Size details: 65 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 3"', price: 7150.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '3"', sizeMm: '75 mm', details: 'Flange type. Size details: 75 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 4"', price: 11700.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '4"', sizeMm: '100 mm', details: 'Flange type. Size details: 100 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 5"', price: 16900.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '5"', sizeMm: '125 mm', details: 'Flange type. Size details: 125 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 6"', price: 21840.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '6"', sizeMm: '150 mm', details: 'Flange type. Size details: 150 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 8"', price: 39000.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '8"', sizeMm: '200 mm', details: 'Flange type. Size details: 200 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 10"', price: 58500.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '10"', sizeMm: '250 mm', details: 'Flange type. Size details: 250 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Y-Strainer Flange 12"', price: 94900.00, fixed: true, brand: 'Hercotech', category: 'Valves', sizeInch: '12"', sizeMm: '300 mm', details: 'Flange type. Size details: 300 mm.', sourcePriority: 3 },
+
+  { name: 'Hercotech Stainless Steel Flexible Coupling 2"', price: 4160.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '2"', sizeMm: '50 mm', details: 'Stainless steel flexible coupling. Size details: 50 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 2-1/2"', price: 4680.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '2-1/2"', sizeMm: '65 mm', details: 'Stainless steel flexible coupling. Size details: 65 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 3"', price: 6240.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '3"', sizeMm: '75 mm', details: 'Stainless steel flexible coupling. Size details: 75 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 4"', price: 7800.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '4"', sizeMm: '100 mm', details: 'Stainless steel flexible coupling. Size details: 100 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 5"', price: 10140.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '5"', sizeMm: '125 mm', details: 'Stainless steel flexible coupling. Size details: 125 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 6"', price: 13000.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '6"', sizeMm: '150 mm', details: 'Stainless steel flexible coupling. Size details: 150 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 8"', price: 17550.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '8"', sizeMm: '200 mm', details: 'Stainless steel flexible coupling. Size details: 200 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 10"', price: 23400.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '10"', sizeMm: '250 mm', details: 'Stainless steel flexible coupling. Size details: 250 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Stainless Steel Flexible Coupling 12"', price: 33800.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '12"', sizeMm: '300 mm', details: 'Stainless steel flexible coupling. Size details: 300 mm.', sourcePriority: 3 },
+
+  { name: 'Hercotech Hub-Less Stainless Coupling 2"', price: 214.50, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '2"', sizeMm: '50 mm', details: 'Hub-less stainless coupling. Size details: 50 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Hub-Less Stainless Coupling 3"', price: 260.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '3"', sizeMm: '75 mm', details: 'Hub-less stainless coupling. Size details: 75 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Hub-Less Stainless Coupling 4"', price: 299.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '4"', sizeMm: '100 mm', details: 'Hub-less stainless coupling. Size details: 100 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Hub-Less Stainless Coupling 6"', price: 780.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '6"', sizeMm: '150 mm', details: 'Hub-less stainless coupling. Size details: 150 mm.', sourcePriority: 3 },
+  { name: 'Hercotech Hub-Less Stainless Coupling 8"', price: 1105.00, fixed: true, brand: 'Hercotech', category: 'Stainless / SS', sizeInch: '8"', sizeMm: '200 mm', details: 'Hub-less stainless coupling. Size details: 200 mm.', sourcePriority: 3 },
+
+  { name: 'Hercotech DI Mechanical Tee 2"', price: 3770.00, fixed: true, brand: 'Hercotech', category: 'CI / DI', sizeInch: '2"', sizeMm: '50 mm', details: 'Ductile iron mechanical tee. Size details: 50 mm.', sourcePriority: 3 },
+  { name: 'Hercotech DI Mechanical Tee 3"', price: 4680.00, fixed: true, brand: 'Hercotech', category: 'CI / DI', sizeInch: '3"', sizeMm: '75 mm', details: 'Ductile iron mechanical tee. Size details: 75 mm.', sourcePriority: 3 },
+  { name: 'Hercotech DI Mechanical Tee 4"', price: 7280.00, fixed: true, brand: 'Hercotech', category: 'CI / DI', sizeInch: '4"', sizeMm: '100 mm', details: 'Ductile iron mechanical tee. Size details: 100 mm.', sourcePriority: 3 },
+  { name: 'Hercotech DI Mechanical Tee 6"', price: 13000.00, fixed: true, brand: 'Hercotech', category: 'CI / DI', sizeInch: '6"', sizeMm: '150 mm', details: 'Ductile iron mechanical tee. Size details: 150 mm.', sourcePriority: 3 },
+  { name: 'Hercotech DI Mechanical Tee 8"', price: 18200.00, fixed: true, brand: 'Hercotech', category: 'CI / DI', sizeInch: '8"', sizeMm: '200 mm', details: 'Ductile iron mechanical tee. Size details: 200 mm.', sourcePriority: 3 },
+
+  { name: 'FS Brass Angle Ball Valve 1/2" x 3/4"', price: 721.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2" x 3/4"', sizeMm: '15 mm x 20 mm', details: 'Brass angle ball valve. Size details: 15 mm x 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Angle Ball Valve 3/4" x 3/4"', price: 854.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4" x 3/4"', sizeMm: '20 mm x 20 mm', details: 'Brass angle ball valve. Size details: 20 mm x 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Angle Valve with Lockhead 3/4" x 1/2"', price: 742.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4" x 1/2"', sizeMm: '20 mm x 15 mm', details: 'Brass angle valve with lockhead. Size details: 20 mm x 15 mm.', sourcePriority: 3 },
+
+  { name: 'FS BRP Brass Replacement Piece ISO Old Design with Brass Stiffener 1/2"', price: 224.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'ISO old design with brass stiffener. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS BRP Brass Replacement Piece ISO Old Design with Brass Stiffener 3/4"', price: 336.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'ISO old design with brass stiffener. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS BRP Brass Replacement Piece ISO Old Design with Brass Stiffener 1"', price: 445.20, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1"', sizeMm: '25 mm', details: 'ISO old design with brass stiffener. Size details: 25 mm.', sourcePriority: 3 },
+  { name: 'FS BRP Brass Replacement Piece ISO Italian Design without Brass Stiffener 1/2"', price: 210.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'ISO Italian design without brass stiffener. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS BRP Brass Replacement Piece ISO Italian Design without Brass Stiffener 3/4"', price: 308.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'ISO Italian design without brass stiffener. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS BRP Brass Replacement Piece ISO Italian Design without Brass Stiffener 1"', price: 420.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1"', sizeMm: '25 mm', details: 'ISO Italian design without brass stiffener. Size details: 25 mm.', sourcePriority: 3 },
+
+  { name: 'FS Brass Corpo Stop Cock Clamp Type ISO 1/2"', price: 646.80, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'Clamp type ISO corpo stop cock. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Corpo Stop Cock Clamp Type ISO 3/4"', price: 943.60, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'Clamp type ISO corpo stop cock. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Male Adaptor Clamp Type ISO 1/2"', price: 294.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'Clamp type ISO male adaptor. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Male Adaptor Clamp Type ISO 3/4"', price: 445.20, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'Clamp type ISO male adaptor. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Male Adaptor CTS 1/2"', price: 211.40, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'CTS male adaptor. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Male Adaptor CTS 3/4"', price: 310.80, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'CTS male adaptor. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Male Adaptor CTS 1"', price: 420.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1"', sizeMm: '25 mm', details: 'CTS male adaptor. Size details: 25 mm.', sourcePriority: 3 },
+
+  { name: 'FS Brass Coupling ISO Compression Type 3/4"', price: 296.80, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'ISO compression type coupling. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Coupling ISO Compression Type 1"', price: 445.20, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1"', sizeMm: '25 mm', details: 'ISO compression type coupling. Size details: 25 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Union Coupling 3/4"', price: 358.40, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'Brass union coupling. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Union Coupling Clamp Type 1/2"', price: 358.40, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'Clamp type union coupling. Size details: 15 mm.', sourcePriority: 3 },
+
+  { name: 'FS Brass Ball Valve with Lockhead / Magnetic Ball Valve 1/2"', price: 511.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'Brass ball valve with lockhead / magnetic ball valve. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Ball Valve with Lockhead / Magnetic Ball Valve 3/4"', price: 616.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '3/4"', sizeMm: '20 mm', details: 'Brass ball valve with lockhead / magnetic ball valve. Size details: 20 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Ball Valve with Lockhead / Magnetic Ball Valve 1"', price: 742.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1"', sizeMm: '25 mm', details: 'Brass ball valve with lockhead / magnetic ball valve. Size details: 25 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Ball Valve with Lockhead / Magnetic Ball Valve 2"', price: 3516.80, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '2"', sizeMm: '50 mm', details: 'Brass ball valve with lockhead / magnetic ball valve. Size details: 50 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Ball Valve without Lockhead Spare Parts 1/2"', price: 445.20, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2"', sizeMm: '15 mm', details: 'Brass ball valve without lockhead spare parts. Size details: 15 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Ball Valve without Lockhead Spare Parts 1/2" - 1"', price: 133.00, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2" - 1"', sizeMm: '15 mm - 25 mm', details: 'Brass ball valve spare parts. Size details: 15 mm - 25 mm.', sourcePriority: 3 },
+  { name: 'FS Brass Key Handle 1/2" - 2"', price: 204.40, fixed: true, brand: 'FS', category: 'Brass', sizeInch: '1/2" - 2"', sizeMm: '15 mm - 50 mm', details: 'Brass key handle. Size details: 15 mm - 50 mm.', sourcePriority: 3 },
+  { name: 'FS Plastic Key Handle 1/2" - 2"', price: 63.00, fixed: true, brand: 'FS', category: 'Accessories', sizeInch: '1/2" - 2"', sizeMm: '15 mm - 50 mm', details: 'Plastic key handle. Size details: 15 mm - 50 mm.', sourcePriority: 3 },
+
+  { name: 'Woltman DI Flow Meter F/F with SRF & BNG Standard 2"', price: 7625.00, fixed: false, brand: 'Woltman', category: 'Meters', sizeInch: '2"', sizeMm: '50 mm', details: 'DI flow meter F/F with SRF and BNG standard. Base price. Size details: 50 mm.', sourcePriority: 3 },
+  { name: 'Woltman DI Flow Meter F/F with SRF & BNG Standard 2-1/2"', price: 8822.00, fixed: false, brand: 'Woltman', category: 'Meters', sizeInch: '2-1/2"', sizeMm: '65 mm', details: 'DI flow meter F/F with SRF and BNG standard. Base price. Size details: 65 mm.', sourcePriority: 3 },
+  { name: 'Woltman DI Flow Meter F/F with SRF & BNG Standard 4"', price: 11862.00, fixed: false, brand: 'Woltman', category: 'Meters', sizeInch: '4"', sizeMm: '100 mm', details: 'DI flow meter F/F with SRF and BNG standard. Base price. Size details: 100 mm.', sourcePriority: 3 },
+  { name: 'Woltman DI Flow Meter F/F with SRF & BNG Standard 6"', price: 16913.00, fixed: false, brand: 'Woltman', category: 'Meters', sizeInch: '6"', sizeMm: '150 mm', details: 'DI flow meter F/F with SRF and BNG standard. Base price. Size details: 150 mm.', sourcePriority: 3 },
+  { name: 'Woltman DI Flow Meter F/F with SRF & BNG Standard 8"', price: 22914.00, fixed: false, brand: 'Woltman', category: 'Meters', sizeInch: '8"', sizeMm: '200 mm', details: 'DI flow meter F/F with SRF and BNG standard. Base price. Size details: 200 mm.', sourcePriority: 3 },
+  { name: 'Woltman DI Flow Meter F/F with SRF & BNG Standard 10"', price: 42560.00, fixed: false, brand: 'Woltman', category: 'Meters', sizeInch: '10"', sizeMm: '250 mm', details: 'DI flow meter F/F with SRF and BNG standard. Base price. Size details: 250 mm.', sourcePriority: 3 },
 ];
 // ===== LEVIYA PRODUCT DATABASE END =====
 
